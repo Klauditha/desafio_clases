@@ -36,3 +36,13 @@ p:hover{
     transform: rotateX(250deg) rotateY(200deg);
     transform-style: preserve-3d;
 }
+
+/*Nota para efecto de imagenes*/
+.card img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
