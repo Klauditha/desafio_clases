@@ -11,43 +11,58 @@
     height: 600px;
     margin: 40px auto;
     perspective: 310px;
-
-    
+    transition: 5s;
 }
-.box{
-    width:100px;
-    height:100px;
-    background-color:violet;
-    transition: 3s;
-    border-radius: 30%;   
-    perspective: 310px;
+.header{
+    display:flex;
+    transition: 5s;
+    color: #ff0000;
+    font-size: 10px;
 
 }
-.box:hover{
-    translate: 200px;
-    /*rotate: 180deg;*/
-    transform: rotate(259deg) scale(1.52);
-    
 
+.header:hover{
+    color: yellow;
+    font-size: 50px;
+}
+img{
+    opacity: 1;
+    /*transition: opacity 5s ease 0s;*/
+    animation: myAnim 2s ease 0s infinite normal forwards;
 
 }
-p{
-    animation: myAnim 2s ease-in 0s infinite normal backwards;
 
-}
 @keyframes myAnim {
 	0%,
-	50%,
 	100% {
-		opacity: 1;
+		transform: translateX(0);
 	}
 
-	25%,
-	75% {
-		opacity: 0;
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateX(-10px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateX(10px);
+	}
+
+	80% {
+		transform: translateX(8px);
+	}
+
+	90% {
+		transform: translateX(-8px);
 	}
 }
-p:hover{
-    transform: rotateX(250deg) rotateY(200deg);
-    transform-style: preserve-3d;
+
+img:hover{
+    transform: scale(2.02);
+    opacity: 0.6;
+    transform: rotate(162deg);
+    width: 300px;
 }
