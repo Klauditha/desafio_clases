@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    outline: 2px solid black;
+    height: 600px;
+    margin: 40px auto;
+    perspective: 310px;
+
+    
+}
+.box{
+    width:100px;
+    height:100px;
+    background-color:violet;
+    transition: 3s;
+    border-radius: 30%;   
+    perspective: 310px;
+
+}
+.box:hover{
+    translate: 200px;
+    /*rotate: 180deg;*/
+    transform: rotate(259deg) scale(1.52);
+    
+
+
+}
+p{
+    animation: myAnim 2s ease-in 0s infinite normal backwards;
+
+}
+@keyframes myAnim {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+p:hover{
+    transform: rotateX(250deg) rotateY(200deg);
+    transform-style: preserve-3d;
+}
